@@ -1,0 +1,98 @@
+﻿<Window x:Class="BindingPath.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Path" Height="500" Width="805">
+    
+    <Grid Background="Gold">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--源的属性作Path-->
+        <Grid Background="Azure">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="txtBlockPath1" Text="源的属性作Path" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="0" />
+            <TextBlock Name="txtBlock1" Text="计算文本框字符串的长度" Height="25"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="1" />
+            <TextBlock Name="textBlockString" Text="请输入字符:" Height="25" Width="67" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0"/>
+            <TextBox Name="textBox" Width="240" Height="25" Grid.Column="2" Grid.Row="2" />
+            <TextBlock Name="textBlockStringLong" Text="字符串长度为:" HorizontalAlignment="Right" Height="23" Grid.Row="3" Grid.Column="0"/>
+            <TextBox  Name="textBox1" Text="{Binding Path=Text.Length,ElementName=textBox,Mode=OneWay}" Width="240" Height="25" Grid.Row="3" Grid.Column="1" />
+        </Grid>
+        <!--源的索引作Path-->
+        <Grid Background="Azure" Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="txtBlockPath2" Text="源的索引作Path" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="0" />
+            <TextBlock Name="txtBlock2" Text="查看文本框字符串的第一个字符" Height="25"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="1" />
+            <TextBlock Name="textBlockString1" Text="请输入字符:" Height="25" Width="67" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0"/>
+            <TextBox Name="txtString1" Width="240" Height="25" Grid.Column="1" Grid.Row="2" />
+            <TextBlock Name="textBlockStringLong1" Text="第一个字符为:" HorizontalAlignment="Right" Height="23" Grid.Row="3" Grid.Column="0"/>
+            <TextBox  Name="txtFirstChar" Text="{Binding Path=Text.[0],ElementName=txtString1,Mode=OneWay}" Width="240" Height="25" Grid.Row="3" Grid.Column="1" />
+        </Grid>
+        <!--默认元素当path-->
+        <Grid Background="Azure" Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="txtBlock3" Text="默认元素当path" Height="25"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="1"/>
+            <TextBlock Name="textBlockString2" Text="名字:" Height="25" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"/>
+            <TextBox Name="txtName" Width="240" Height="25" Grid.Column="1" Grid.Row="1" />
+            <TextBlock Name="txtBlockSecondChar" Text="名字的第二个字符:" HorizontalAlignment="Right" Height="23" Grid.Row="2" Grid.Column="0"/>
+            <TextBox  Name="txtSecondChar" Width="240" Height="25" Grid.Row="2" Grid.Column="1" />
+            <TextBlock Name="textBlockStringLong3" Text="字符长度为:" HorizontalAlignment="Right" Height="23" Grid.Row="3" Grid.Column="0"/>
+            <TextBox  Name="txtLength"  Width="240" Height="25" Grid.Row="3" Grid.Column="1" />
+        </Grid>
+        <!--多级默认元素当path-->
+        <Grid Background="Azure" Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="txtBlock4" Text="多级默认元素当path" Height="25"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="1"/>
+            <TextBlock Name="textBlockCountry" Text="国家:" Height="25" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"/>
+            <TextBox Name="txtCountry" Width="240" Height="25" Grid.Column="1" Grid.Row="1" />
+            <TextBlock Name="txtBlockProvince" Text="省份:" HorizontalAlignment="Right" Height="23" Grid.Row="2" Grid.Column="0"/>
+            <TextBox  Name="txtProvince" Width="240" Height="25" Grid.Row="2" Grid.Column="1" />
+            <TextBlock Name="textBlockCity" Text="城市:" HorizontalAlignment="Right" Height="23" Grid.Row="3" Grid.Column="0"/>
+            <TextBox  Name="txtCity"  Width="240" Height="25" Grid.Row="3" Grid.Column="1" />
+        </Grid>
+        <StackPanel>
+            <TextBox x:Name="textBox2" Text="{Binding Path=Value,ElementName=slider1}"/>
+            <Slider x:Name="slider1" Maximum="100" Minimum="0" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

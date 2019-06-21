@@ -1,0 +1,13 @@
+D:\Learning\WPF\BindingPath\BindingPath\bin\Debug\BindingPath.exe.config
+D:\Learning\WPF\BindingPath\BindingPath\obj\Debug\MainWindow.baml
+D:\Learning\WPF\BindingPath\BindingPath\obj\Debug\MainWindow.g.cs
+D:\Learning\WPF\BindingPath\BindingPath\obj\Debug\App.g.cs
+D:\Learning\WPF\BindingPath\BindingPath\obj\Debug\BindingPath_MarkupCompile.cache
+D:\Learning\WPF\BindingPath\BindingPath\obj\Debug\BindingPath.g.resources
+D:\Learning\WPF\BindingPath\BindingPath\obj\Debug\BindingPath.Properties.Resources.resources
+D:\Learning\WPF\BindingPath\BindingPath\obj\Debug\BindingPath.csproj.GenerateResource.Cache
+D:\Learning\WPF\BindingPath\BindingPath\bin\Debug\BindingPath.exe
+D:\Learning\WPF\BindingPath\BindingPath\bin\Debug\BindingPath.pdb
+D:\Learning\WPF\BindingPath\BindingPath\obj\Debug\BindingPath.exe
+D:\Learning\WPF\BindingPath\BindingPath\obj\Debug\BindingPath.pdb
+D:\Learning\WPF\BindingPath\BindingPath\obj\Debug\BindingPath.csprojResolveAssemblyReference.cache
